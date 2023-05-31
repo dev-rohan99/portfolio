@@ -15,11 +15,11 @@ const Portfolio = () => {
 
               <div className="flex lg:justify-start justify-center">
 
-                <a href="/" className={`w-[150px] h-[40px] text-[14px] md:w-[150px] md:h-[45px] md:text-[15px] lg:w-[150px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[17px] flex justify-center items-center hover:bg-[#28AE60] border-[2px] md:border-[3px] border-[#28AE60] ease-in-out duration-500 font-semibold rounded-md hover:text-[#ffffff] mr-3 lg:mr-4 ${"web" ? "bg-[#28AE60] text-white" : "bg-transparent text-[#28AE60]"}`}>Web</a>
+                <a className={`w-[150px] h-[40px] text-[14px] md:w-[150px] md:h-[45px] md:text-[15px] lg:w-[150px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[17px] flex justify-center items-center hover:bg-[#28AE60] border-[2px] md:border-[3px] border-[#28AE60] ease-in-out duration-500 font-semibold rounded-md hover:text-[#ffffff] mr-3 lg:mr-4 ${"web" ? "bg-[#28AE60] text-white" : "bg-transparent text-[#28AE60]"}`}>Web</a>
 
-                <a href="/" className={`w-[150px] h-[40px] text-[14px] md:w-[150px] md:h-[45px] md:text-[15px] lg:w-[150px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[17px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] ease-in-out duration-500 font-semibold rounded-md hover:text-[#ffffff] mr-3 lg:mr-4 ${"programming" ? "bg-[#28AE60] text-white" : "bg-transparent text-[#28AE60]"}`}>Programming</a>
+                <a className={`w-[150px] h-[40px] text-[14px] md:w-[150px] md:h-[45px] md:text-[15px] lg:w-[150px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[17px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] ease-in-out duration-500 font-semibold rounded-md hover:text-[#ffffff] mr-3 lg:mr-4 ${"programming" ? "bg-[#28AE60] text-white" : "bg-transparent text-[#28AE60]"}`}>Programming</a>
 
-                <a href="/" className={`w-[150px] h-[40px] text-[14px] md:w-[150px] md:h-[45px] md:text-[15px] lg:w-[150px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[17px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] ease-in-out duration-500 font-semibold rounded-md hover:text-[#ffffff] mr-0 ${"tools" ? "bg-[#28AE60] text-white" : "bg-transparent text-[#28AE60]"}`}>Tools</a>
+                <a className={`w-[150px] h-[40px] text-[14px] md:w-[150px] md:h-[45px] md:text-[15px] lg:w-[150px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[17px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] ease-in-out duration-500 font-semibold rounded-md hover:text-[#ffffff] mr-0 ${"tools" ? "bg-[#28AE60] text-white" : "bg-transparent text-[#28AE60]"}`}>Tools</a>
 
               </div>
 

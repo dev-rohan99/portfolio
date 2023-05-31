@@ -1,13 +1,13 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { Provider } from 'react-redux';  
+import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {store} from '../app/store';
+import { apiSlice } from "../redux/api/apiSlice";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
+    <ApiProvider api={apiSlice}>
       <ToastContainer
         position="bottom-right"
         theme="dark"
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         limit={3}
       />
       <Component {...pageProps} />
-    </Provider>
+    </ApiProvider>
   )
 }
 

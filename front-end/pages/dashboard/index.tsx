@@ -11,9 +11,10 @@ import Analysis from '../../components/analysis/Analysis';
 import Order from '../../components/order/Order';
 import Profile from '../../components/profile/Profile';
 import Setting from '../../components/setting/Setting';
+import Link from 'next/link';
 
 
-const index = () => {
+const Index = () => {
 
   const [dashboard, setDashboard] = useState<boolean>(true);
   const [analysis, setAnalysis] = useState<boolean>(false);
@@ -103,7 +104,7 @@ const index = () => {
 
                 <div className="p-4 flex justify-start items-center rounded-md bg-[#ffffff46]">
                   <div className="w-[50px] h-[50px] rounded-full overflow-hidden">
-                    <Image className="object-cover" src={profilePhoto} alt=""/>
+                    <Image className="object-cover" src={profilePhoto} alt="dev rohan"/>
                   </div>
 
                   <div className="text-white ml-3 cursor-pointer">
@@ -114,14 +115,14 @@ const index = () => {
 
                 <div className="mt-5">
                   <ul className="text-white">
-                    <li className=""><a href="/" onClick={handleDashboardShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] hover:scale-[1.04] ${dashboard ? "active" : ""}`}><AiFillDashboard className="text-3xl text-[#a0ffc8] mr-3"/>Dashboard</a></li>
-                    <li className=""><a href="/" onClick={handleAnalysisShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${analysis ? "active" : ""}`}><MdAnalytics className="text-3xl text-[#a0ffc8] mr-3"/>Analysis</a></li>
-                    <li className=""><a href="/" onClick={handleOrderShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${order ? "active" : ""}`}><FaCartPlus className="text-3xl text-[#a0ffc8] mr-3"/>Order</a></li>
-                    <li className=""><a href="/" onClick={handleChatShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${chat ? "active" : ""}`}><SiGooglemessages className="text-3xl text-[#a0ffc8] mr-3"/>Chat with Rohan</a></li>
-                    <li className=""><a href="/" onClick={handleProfileShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${profile ? "active" : ""}`}><RiProfileFill className="text-3xl text-[#a0ffc8] mr-3"/>Profile</a></li>
-                    <li className="pb-4 border-b-[3px] border-[#ffffff46]"><a href="/" onClick={handleSettingsShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${settings ? "active" : ""}`}><RiSettings5Fill className="text-3xl text-[#a0ffc8] mr-3"/>Settings</a></li>
+                    <li className=""><Link href="/" onClick={handleDashboardShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] hover:scale-[1.04] ${dashboard ? "active" : ""}`}><AiFillDashboard className="text-3xl text-[#a0ffc8] mr-3"/>Dashboard</Link></li>
+                    <li className=""><Link href="/" onClick={handleAnalysisShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${analysis ? "active" : ""}`}><MdAnalytics className="text-3xl text-[#a0ffc8] mr-3"/>Analysis</Link></li>
+                    <li className=""><Link href="/" onClick={handleOrderShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${order ? "active" : ""}`}><FaCartPlus className="text-3xl text-[#a0ffc8] mr-3"/>Order</Link></li>
+                    <li className=""><Link href="/" onClick={handleChatShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${chat ? "active" : ""}`}><SiGooglemessages className="text-3xl text-[#a0ffc8] mr-3"/>Chat with Rohan</Link></li>
+                    <li className=""><Link href="/" onClick={handleProfileShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${profile ? "active" : ""}`}><RiProfileFill className="text-3xl text-[#a0ffc8] mr-3"/>Profile</Link></li>
+                    <li className="pb-4 border-b-[3px] border-[#ffffff46]"><Link href="/" onClick={handleSettingsShow} className={`p-3 duration-500 text-[16px] flex justify-start items-center font-semibold rounded-md hover:bg-[#ffffff46] mt-3 hover:scale-[1.04] ${settings ? "active" : ""}`}><RiSettings5Fill className="text-3xl text-[#a0ffc8] mr-3"/>Settings</Link></li>
 
-                    <li className=""><a href="/" className="p-3 duration-500 text-[16px] mt-8 flex justify-start items-center font-semibold rounded-md bg-[#ffffff46] hover:scale-[1.04]"><RiLogoutBoxFill className="text-3xl text-[#a0ffc8] mr-3"/>Logout!</a></li>
+                    <li className=""><Link href="/" className="p-3 duration-500 text-[16px] mt-8 flex justify-start items-center font-semibold rounded-md bg-[#ffffff46] hover:scale-[1.04]"><RiLogoutBoxFill className="text-3xl text-[#a0ffc8] mr-3"/>Logout!</Link></li>
                   </ul>
                 </div>
 
@@ -160,4 +161,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;

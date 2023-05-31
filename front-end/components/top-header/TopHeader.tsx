@@ -24,12 +24,12 @@ const TopHeader = () => {
                     </div>
 
                     <div className="w-[50%] hidden text-white lg:flex lg:items-center lg:justify-end">
-                        <a href="/" className="flex justify-start items-center font-semibold mr-8 text-[14px] ease-in-out duration-500 hover:text-[#28AE60] emailBlock">
+                        <a className="flex justify-start items-center font-semibold mr-8 text-[14px] ease-in-out duration-500 hover:text-[#28AE60] emailBlock">
                             <AiTwotoneMail className="text-lg mr-2 mt-[2px] text-[#28AE60]"/>
                             contact@devrohan.com
                         </a>
 
-                        <a href="/" className="flex justify-start items-center font-semibold text-[14px] ease-in-out duration-500 hover:text-[#28AE60] phoneBlock">
+                        <a className="flex justify-start items-center font-semibold text-[14px] ease-in-out duration-500 hover:text-[#28AE60] phoneBlock">
                             <FaWhatsappSquare className="text-lg mr-2 mt-[2px] text-[#28AE60]"/>
                             01631699535
                         </a>

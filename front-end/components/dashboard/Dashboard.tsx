@@ -3,6 +3,7 @@ import { MdClose, MdIncompleteCircle } from 'react-icons/md';
 import { IoWalletSharp } from 'react-icons/io5';
 import { FaRunning } from 'react-icons/fa';
 import { BsFillCartCheckFill } from 'react-icons/bs';
+import Link from 'next/link';
 
 
 const Dashboard = () => {
@@ -11,9 +12,9 @@ const Dashboard = () => {
   return (
     <>
     
-        <div className="bg-gradient-to-r text-white mb-10 rounded-lg from-[#17773f] to-[#292929] p-4 flex justify-between items-center font-bold">
+        <div className="bg-gradient-to-r text-white mb-10 rounded-lg from-[#17773f] to-[#292929] p-4 flex justify-between items-center font-bold z-[100]">
             <h4>Hello there! Welcome! Welcome to my dashboard!</h4>
-            <a href="/" className="w-[30px] h-[30px] flex justify-center items-center duration-500 hover:bg-[#ffffff7d]"><MdClose className="text-2xl"/></a>
+            <Link href="/"><a className="w-[30px] h-[30px] flex justify-center items-center duration-500 hover:bg-[#ffffff7d]"><MdClose className="text-2xl"/></a></Link>
         </div>
 
         <div className="grid grid-cols-4 gap-5">

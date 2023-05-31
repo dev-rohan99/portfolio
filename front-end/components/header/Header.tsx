@@ -11,12 +11,12 @@ const Header = () => {
 
     const [mobileMenu, setMobileMenu] = useState(false);
 
-    const handleMenuShow = (e : MouseEventHandler<HTMLAnchorElement>) => {
+    const handleMenuShow = (e : any) => {
         e.preventDefault();
         setMobileMenu(true);
     }
 
-    const handleMenuHide = (e : MouseEventHandler<HTMLAnchorElement>) => {
+    const handleMenuHide = (e : any) => {
         e.preventDefault();
         setMobileMenu(false);
     }

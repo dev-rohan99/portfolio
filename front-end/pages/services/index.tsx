@@ -7,7 +7,7 @@ import Services from '../../components/services-section/Services';
 import TopHeader from '../../components/top-header/TopHeader';
 
 
-const index = () => {
+const Index = () => {
 
 
   return (
@@ -28,4 +28,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;

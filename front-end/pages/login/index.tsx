@@ -5,10 +5,9 @@ import { useDispatch } from 'react-redux';
 import TopHeader from '../../components/top-header/TopHeader';
 import toaster from '../../utility/toaster';
 import { isEmail, isPassword, isUsername } from '../../utility/validation';
-import { userLogin } from './loginAPI';
 
 
-const index = () => {
+const Index = () => {
 
     const dispatch = useDispatch();
     const router = useRouter();
@@ -41,10 +40,7 @@ const index = () => {
                 if(!isPassword(input.password)){
                     toaster("warn", "Invalid password! please enter valid password and length should be minimum 6 characters.");
                 }else{
-                    dispatch(userLogin({
-                        emailOrUsername : input.emailOrUsername,
-                        password : input.password
-                    }, router));
+                    
                 }
             }else{
                 if(!isEmail(input.emailOrUsername) || !isUsername(input.emailOrUsername)){
@@ -99,4 +95,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;

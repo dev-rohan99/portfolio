@@ -14,6 +14,8 @@ import Services from '../components/services-section/Services';
 import Portfolio from '../components/portfolio-section/Portfolio';
 import Contact from '../components/contact-section/Contact';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
+
 
 const Home: NextPage = () => {
 
@@ -37,14 +39,14 @@ const Home: NextPage = () => {
                 <div className="container">
                   <div className="lg:w-[50%] mx-auto lg:mx-0 w-[100%] lg:text-left text-center md:w-[600px]">
                     <h1 className="text-[26px] md:text-[32px] lg:text-[35px] xl:text-[45px] 2xl:text-[50px] text-white font-semibold bannerHeading">Grow Big with <span className="text-[#28AE60]">Dev Rohan</span> {'"Full Stack Developer"'}</h1>
-                    <p className="text-[15px] md:text-[18px] xl:text-[19px] lg:text-[16px] 2xl:text-[23px] text-white mt-3 mb-3 font-normal bannerPara">I'm a <span className="font-medium text-[#28AE60]">Full-Stack</span> Web Developer with extra experience. I specialize in <span className="font-medium text-[#28AE60]">JavaScript</span> and have worked with <span className="font-medium text-[#28AE60]">MongoDB</span>, <span className="font-medium text-[#28AE60]">Express.js</span>, <span className="font-medium text-[#28AE60]">React.js</span>, and <span className="font-medium text-[#28AE60]">Node.js</span> in the past.</p>
+                    <p className="text-[15px] md:text-[18px] xl:text-[19px] lg:text-[16px] 2xl:text-[23px] text-white mt-3 mb-3 font-normal bannerPara">I{"'"}m a <span className="font-medium text-[#28AE60]">Full-Stack</span> Web Developer with extra experience. I specialize in <span className="font-medium text-[#28AE60]">JavaScript</span> and have worked with <span className="font-medium text-[#28AE60]">MongoDB</span>, <span className="font-medium text-[#28AE60]">Express.js</span>, <span className="font-medium text-[#28AE60]">React.js</span>, and <span className="font-medium text-[#28AE60]">Node.js</span> in the past.</p>
 
                     <div className="flex lg:justify-start justify-center mt-7">
-                      <a href="#contactme" className="w-[130px] h-[40px] text-[14px] md:w-[140px] md:h-[45px] md:text-[15px] lg:w-[145px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold rounded-md hover:text-[#28AE60] mr-5 bannerBtnOne">
+                      <Link href="#contactme"><a className="w-[130px] h-[40px] text-[14px] md:w-[140px] md:h-[45px] md:text-[15px] lg:w-[145px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold rounded-md hover:text-[#28AE60] mr-5 bannerBtnOne">
                           HIRE ME
-                      </a>
+                      </a></Link>
 
-                      <a href="/" className="w-[190px] h-[40px] text-[14px] md:w-[190px] md:h-[45px] md:text-[15px] lg:w-[200px] lg:h-[45px] lg:text-[16px] xl:w-[210px] xl:h-[50px] 2xl:w-[220px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] bg-transparent ease-in-out duration-500 text-[#28AE60] font-semibold rounded-md hover:text-[#ffffff] bannerBtnTwo">
+                      <a className="w-[190px] h-[40px] text-[14px] md:w-[190px] md:h-[45px] md:text-[15px] lg:w-[200px] lg:h-[45px] lg:text-[16px] xl:w-[210px] xl:h-[50px] 2xl:w-[220px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] bg-transparent ease-in-out duration-500 text-[#28AE60] font-semibold rounded-md hover:text-[#ffffff] bannerBtnTwo">
                           <FaPlayCircle className="2xl mr-2"/>See how it works
                       </a>
                     </div>
@@ -70,7 +72,7 @@ const Home: NextPage = () => {
                   <h1 ref={heading} className={`text-[26px] md:text-[32px] lg:text-[35px] xl:text-[45px] 2xl:text-[50px] text-white font-semibold ${myHeadingIsVisible ? "heading2ndBlock" : ""}`}>The Largest Business Expert</h1>
                   <p className={`text-[15px] md:text-[18px] xl:text-[19px] lg:text-[16px] 2xl:text-[23px] text-white mt-3 mb-3 font-normal ${myHeadingIsVisible ? "para2ndBlock" : ""}`}>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.</p>
                   <div className="flex lg:justify-end justify-center mt-5">
-                    <a href="/" className={`w-[130px] h-[40px] text-[14px] md:w-[140px] md:h-[45px] md:text-[15px] lg:w-[145px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold rounded-md hover:text-[#28AE60] ${myHeadingIsVisible ? "aboutmeBtn" : ""}`}>
+                    <a className={`w-[130px] h-[40px] text-[14px] md:w-[140px] md:h-[45px] md:text-[15px] lg:w-[145px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold rounded-md hover:text-[#28AE60] ${myHeadingIsVisible ? "aboutmeBtn" : ""}`}>
                         About me
                     </a>
                   </div>
