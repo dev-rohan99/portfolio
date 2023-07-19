@@ -43,7 +43,7 @@
     }
 
     .portfolioCard{
-        @apply w-[100%] md:w-[330px] lg:w-[360px] rounded-md bg-[#292929] overflow-hidden hover:translate-y-[20px] duration-500
+        @apply w-[100%] md:w-[330px] lg:w-[380px] rounded-md bg-[#292929] overflow-hidden hover:translate-y-[20px] duration-500
     }
 
     .mainBannerBlock{
