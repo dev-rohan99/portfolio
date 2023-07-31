@@ -28,6 +28,13 @@ const portfolioDataSchemaModel = mongoose.Schema({
         unique : true
     },
 
+    photo : {
+        type : String,
+        required : true,
+        trim : true,
+        unique : true
+    },
+
     projectDesc : {
         type : String,
         required : true,

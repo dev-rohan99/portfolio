@@ -1,5 +1,5 @@
 import express from "express";
-import { userLogin, userSignup } from "../controllers/user-controller/userController.js";
+import { mailSendController, userLogin, userSignup } from "../controllers/user-controller/userController.js";
 import { adminPortfolioCreate, getAllAdminPortfolio } from "../controllers/admin-controller/adminController.js";
 import { verifyUser } from "../middlewares/auth/authMiddleware.js";
 
@@ -14,6 +14,8 @@ router.post("/login", userLogin);
 router.post("/portfolio", verifyUser, adminPortfolioCreate);
 // admin portfolio route
 router.get("/portfolio/get", getAllAdminPortfolio);
+// client mail route
+router.post("/client-mail", mailSendController);
 
 
 export default router;

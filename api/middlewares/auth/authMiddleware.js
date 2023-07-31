@@ -12,6 +12,7 @@ export const verifyUser = (req, res, next) => {
             req.userId = payload.id;
             next();
         });
+        console.log(req.userId);
     }catch(err){
         return next(err);
     }

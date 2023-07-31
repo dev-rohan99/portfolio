@@ -14,23 +14,20 @@ import { createError } from "../../utility/createError.js";
 export const adminPortfolioCreate = async (req, res, next) => {
 
     try{
-
-        const {userId} = req.body;
         
-        const findUserRole = await userModel.findOne({_id : userId});
-
+        const findUserRole = await userModel.findOne({_id : req.userId});
         if(findUserRole.role === "user"){
             return next(createError(401, "You are not eligable for this features!"));
         }
 
         const portfolio = await portfolioModel.create({
             ...req.body,
-            userId : userId
+            userId : req.userId
         });
 
         if(portfolio){
             return res.status(200).json({
-                message : "User sign up successfull!",
+                message : "Successfull!",
                 portfolio : portfolio
             });
         }
@@ -51,15 +48,15 @@ export const adminPortfolioCreate = async (req, res, next) => {
   export const getAllAdminPortfolio = async (req, res, next) => {
     try {
   
-      const fillters = {
-        ...(req.query.cat && {categories : req.query.cat})
-      };
+      // const fillters = {
+      //   ...(req.query.cat && {categories : req.query.cat})
+      // };
       
-      const product = await productModel.find(fillters);
-      if(product){
+      const portfolios = await portfolioModel.find();
+      if(portfolios){
         res.status(200).json({
           message: "Successfull!",
-          product,
+          portfolios,
         });
       }else{
         next(createError(404, "Failed!"));

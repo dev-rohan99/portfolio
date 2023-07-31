@@ -30,17 +30,17 @@ export const apiSlice = createApi({
             })
         }),
 
-        getAllProduct : builder.query({
-            query : (queryVal) => ({
-                url : `/products${queryVal ? `?&minPrice=${queryVal?.minPrice}&maxPrice=${queryVal?.maxPrice}&title=${queryVal?.title ? queryVal?.title : ""}` : "?"}`,
+        getPortfolioItems : builder.query({
+            query : () => ({
+                url : `/user/portfolio/get`,
                 method : "GET"
             })
         }),
 
-        getSingleProduct : builder.query({
-            query : (id) => ({
-                url : `/products/${id}`,
-                method : "GET"
+        clientMessageSend : builder.mutation({
+            query : () => ({
+                url : `/user/client-mail`,
+                method : "POST"
             })
         }),
 
@@ -48,4 +48,4 @@ export const apiSlice = createApi({
 });
 
 
-export const { useRegisterMutation, useLoginMutation, useGetAllProductQuery, useGetSingleProductQuery, useUpdateUserMutation } = apiSlice;
+export const { useRegisterMutation, useLoginMutation, useUpdateUserMutation, useGetPortfolioItemsQuery, useClientMessageSendMutation } = apiSlice;

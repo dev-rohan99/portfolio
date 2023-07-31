@@ -1,7 +1,9 @@
+import clientMailModel from "../../models/client-mail-model/clientMailModel.js";
 import userModel from "../../models/user-model/userModel.js";
 import { checkPassword } from "../../utility/checkPassword.js";
 import { createError } from "../../utility/createError.js";
 import { hashPasswordGenarate } from "../../utility/hashPassword.js";
+import { sendEmail, sendEmailtoAdmin } from "../../utility/sendEmail.js";
 import { createToken } from "../../utility/token.js";
 import { isEmail, isUsername } from "../../utility/validation.js";
 
@@ -117,5 +119,42 @@ export const userLogin = async (req, res, next) => {
 }
 
 
+/**
+ * email send via client
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ * @returns 
+ */
+
+export const mailSendController = async (req, res, next) => {
+    try{
+
+        const {name, email, message} = req.body;
+
+        const clientMail = await clientMailModel.create({
+            ...req.body
+        });
+
+        if(clientMail){
+            sendEmail(clientMail.email, {
+                name : clientMail.name
+            });
+
+            sendEmailtoAdmin("devrohan599@gmail.com", {
+                name : clientMail.name,
+                message : clientMail.message,
+            });
+
+            return res.status(200).json({
+                message : "Successfull!",
+                clientMail : clientMail
+            });
+        }
+
+    }catch(err){
+        return next(err);
+    }
+}
 
 
