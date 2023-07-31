@@ -1,5 +1,5 @@
 {
-  "name": "portfolio back-end development",
+  "name": "portfolio-backend-development",
   "version": "1.0.0",
   "description": "Back-end development for my portfolio website.",
   "main": "./api/server.js",
