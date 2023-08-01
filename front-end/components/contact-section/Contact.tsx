@@ -74,15 +74,15 @@ const Contact = () => {
                   <form onSubmit={handleClientFormSubmit}>
 
                     <div className="mb-5">
-                      <input name="name" onChange={handleInputChange} type="text" className="py-3 px-4 border-[3px] text-[#fff] text-[16px] border-[#28AE60] w-[100%] outline-none rounded-md bg-[#292929]" placeholder="Enter your name" required />
+                      <input name="name" onChange={handleInputChange} value={input.name} type="text" className="py-3 px-4 border-[3px] text-[#fff] text-[16px] border-[#28AE60] w-[100%] outline-none rounded-md bg-[#292929]" placeholder="Enter your name" />
                     </div>
 
                     <div className="mb-5">
-                      <input name="email" type="email" onChange={handleInputChange} className="py-3 px-4 border-[3px] text-[#fff] text-[16px] border-[#28AE60] w-[100%] outline-none rounded-md bg-[#292929]" placeholder="Enter your email address" required />
+                      <input name="email" type="email" onChange={handleInputChange} value={input.email} className="py-3 px-4 border-[3px] text-[#fff] text-[16px] border-[#28AE60] w-[100%] outline-none rounded-md bg-[#292929]" placeholder="Enter your email address" />
                     </div>
 
                     <div className="mb-5">
-                      <textarea name="message" onChange={handleInputChange} className="py-3 px-4 border-[3px] text-[#fff] text-[16px] border-[#28AE60] w-[100%] outline-none rounded-md bg-[#292929]" placeholder="Write your message" cols={30} rows={5} required ></textarea>
+                      <textarea name="message" type="text" onChange={handleInputChange} value={input.message} className="py-3 px-4 border-[3px] text-[#fff] text-[16px] border-[#28AE60] w-[100%] outline-none rounded-md bg-[#292929]" placeholder="Write your message" cols={30} rows={5} ></textarea>
                     </div>
 
                     <div className="mb-0">

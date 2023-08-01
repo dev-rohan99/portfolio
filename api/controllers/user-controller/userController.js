@@ -157,4 +157,23 @@ export const mailSendController = async (req, res, next) => {
     }
 }
 
+/**
+ * download resume
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ * @returns 
+ */
+
+export const downloadMyResume = async (req, res, next) => {
+    try{
+
+        const filePath = "/myresume.pdf";
+        res.download(filePath);
+
+    }catch(err){
+        return next(err);
+    }
+}
+
 

@@ -2,10 +2,30 @@ import Image from 'next/image';
 import React from 'react';
 import MyImage from "../../assets/images/devRohan.jpg";
 import Link from 'next/link';
+import { useDownloadResumeQuery } from '../../redux/api/apiSlice';
+import toaster from '../../utility/toaster';
 
 const About = () => {
 
-
+  const handleDownloadResume = async () => {
+    try {
+      const response = await fetch("/api/v1/user/download-my-resume");
+      const blob = await response.blob();
+      console.log(blob);
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      console.log(url);
+      const a = document.createElement("a");
+      console.log(a);
+      a.href = url;
+      a.download = "myresume.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    } catch (err) {
+      toaster("warn", "Something went wrong!");
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -17,9 +37,7 @@ const About = () => {
                 <p className="text-[15px] md:text-[18px] xl:text-[19px] lg:text-[16px] 2xl:text-[23px] text-white mt-3 mb-3 font-normal">I{"'"}m a Full-Stack Web Developer with experience creating websites and online applications in the business. I specialize in JavaScript and have worked with  MongoDB,  Express.js, React.js, Node.js,  in the past. I{"'"}ve also worked with WordPress previously. Please have a look at my work or contact me if you have any questions.</p>
 
                 <div className="flex lg:justify-start justify-center mt-5">
-                <Link href="/"><a className="w-[180px] h-[40px] text-[14px] md:w-[180px] md:h-[45px] md:text-[15px] lg:w-[190px] lg:h-[45px] lg:text-[16px] xl:w-[200px] xl:h-[50px] 2xl:w-[220px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold rounded-md hover:text-[#28AE60] mr-5">
-                      Download resume
-                  </a></Link>
+                  <button onClick={handleDownloadResume}><a className="w-[180px] h-[40px] text-[14px] md:w-[180px] md:h-[45px] md:text-[15px] lg:w-[190px] lg:h-[45px] lg:text-[16px] xl:w-[200px] xl:h-[50px] 2xl:w-[220px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold rounded-md hover:text-[#28AE60] mr-5">Download resume</a></button>
 
                   <Link href="/"><a className="w-[130px] h-[40px] text-[14px] md:w-[140px] md:h-[45px] md:text-[15px] lg:w-[145px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center hover:bg-[#28AE60] border-[3px] border-[#28AE60] bg-transparent ease-in-out duration-500 text-[#28AE60] font-semibold rounded-md hover:text-[#ffffff]">
                       My skills

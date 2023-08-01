@@ -27,7 +27,9 @@ const Header = () => {
         <div className="container z-50 relative">
             <div className="flex justify-between items-center">
                 <div className="w-[150px] lg:w-[150px] xl:w-[150px] text-white py-3 logoBlock">
-                    <Image className="w-[150px]" src={Logo} alt=""/>
+                    <Link href={"/"}>
+                        <Image className="w-[150px]" src={Logo} alt=""/>
+                    </Link>
                 </div>
 
                 <div className="w-[50%] xl:w-[43%] lg:block hidden text-white font-semibold">

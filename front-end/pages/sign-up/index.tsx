@@ -5,12 +5,14 @@ import {useDispatch} from "react-redux";
 import toaster from '../../utility/toaster';
 import { isEmail, isPassword, isUsername } from '../../utility/validation';
 import { useRouter } from 'next/router';
+import { useRegisterMutation } from '../../redux/api/apiSlice';
 
 
 const Index = () => {
 
     const dispatch = useDispatch();
     const router = useRouter();
+    const [register] = useRegisterMutation();
 
     interface userSignupStructure {
         fullName : string,
@@ -48,7 +50,19 @@ const Index = () => {
                     if(!isPassword(input.password)){
                         toaster("warn", "Invalid password! please enter valid password and length should be minimum 6 characters.");
                     }else{
-                        
+                        register(input).unwrap().then((res) => {
+                            setInput({
+                                fullName : "",
+                                email : "",
+                                username : "",
+                                password : ""
+                            });
+                            console.log(res);
+                            toaster("success", "Thanks for joining us. Please login your account!");
+                            router.push("/login");
+                          }).catch((error) => {
+                            toaster("warn", error.data.message);
+                          });
                     }
                 }
             }

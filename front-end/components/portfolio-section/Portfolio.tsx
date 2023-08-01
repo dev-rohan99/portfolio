@@ -32,7 +32,7 @@ const Portfolio = () => {
 
                   { data?.portfolios.map((data: object, index: number) => (
                       <div className="portfolioCard relative" key={`65546hjgjhg5456${index}`}>
-                        <span className="px-4 py-1 text-[19px] font-medium uppercase rounded-lg shadow-lg text-white bg-[#28AE60] absolute top-3 right-3 z-50">{data.status}</span>
+                        <span className="px-4 py-1 text-[15px] font-medium uppercase rounded-lg shadow-lg text-white bg-[#28AE60] absolute top-3 right-3 z-50">{data.status}</span>
 
                         <Link target='_blank' href={data.projectUrl}>
                           <div className="h-[200px]">
@@ -45,8 +45,8 @@ const Portfolio = () => {
                             <p className="text-[19px] mb-3 text-[#fff] font-medium wrapper">{data.projectDesc}</p>
 
                             <div className="flex justify-start items-center mb-3">
-                              <Link href={data.projectGithubUrl} className="hover:text-[#28AE60] ease-in-out duration-500 text-gray-500 mr-4"><FaGithub className="text-3xl"/></Link>
-                              <Link href={data.projectUrl} className="hover:text-[#28AE60] ease-in-out duration-500 text-gray-500"><FaExternalLinkSquareAlt className="text-3xl"/></Link>
+                              <Link target='_blank' href={data.projectGithubUrl}><span className="hover:text-[#28AE60] ease-in-out duration-500 text-gray-500 mr-3"><FaGithub className="text-3xl"/></span></Link>
+                              <Link target='_blank' href={data.projectUrl}><span className="hover:text-[#28AE60] ease-in-out duration-500 text-gray-500"><FaExternalLinkSquareAlt className="text-3xl"/></span></Link>
                             </div>
 
                             <div className="grid grid-cols-4 gap-1 mt-4 mb-4">

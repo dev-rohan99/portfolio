@@ -38,9 +38,17 @@ export const apiSlice = createApi({
         }),
 
         clientMessageSend : builder.mutation({
-            query : () => ({
+            query : (payload) => ({
                 url : `/user/client-mail`,
-                method : "POST"
+                method : "POST",
+                body : payload
+            })
+        }),
+
+        downloadResume : builder.query({
+            query : () => ({
+                url : `/user/download-my-resume`,
+                method : "GET"
             })
         }),
 
@@ -48,4 +56,4 @@ export const apiSlice = createApi({
 });
 
 
-export const { useRegisterMutation, useLoginMutation, useUpdateUserMutation, useGetPortfolioItemsQuery, useClientMessageSendMutation } = apiSlice;
+export const { useRegisterMutation, useLoginMutation, useUpdateUserMutation, useGetPortfolioItemsQuery, useClientMessageSendMutation, useDownloadResumeQuery } = apiSlice;

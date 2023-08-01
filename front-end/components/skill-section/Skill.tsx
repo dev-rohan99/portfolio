@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {RiReactjsLine, RiHtml5Fill, RiCss3Fill} from "react-icons/ri";
-import {SiJavascript, SiTypescript, SiRedux, SiExpress, SiMongodb, SiPhp, SiBabel, SiWebpack, SiSocketdotio, SiAdobeillustrator, SiAdobephotoshop, SiTailwindcss, SiJquery} from "react-icons/si";
+import {SiJavascript, SiTypescript, SiRedux, SiExpress, SiMongodb, SiPhp, SiBabel, SiWebpack, SiSocketdotio, SiAdobeillustrator, SiAdobephotoshop, SiTailwindcss, SiJquery, SiNestjs} from "react-icons/si";
 import {TbBrandNextjs} from "react-icons/tb";
 import {CgFigma} from "react-icons/cg";
-import {FaNodeJs, FaWordpress, FaNpm, FaGitAlt, FaSass, FaBootstrap} from "react-icons/fa";
+import {FaNodeJs, FaWordpress, FaNpm, FaGitAlt, FaSass, FaBootstrap, FaVuejs, FaPython} from "react-icons/fa";
 
 const Skill = () => {
 
@@ -30,10 +30,12 @@ const Skill = () => {
             { icon : SiJavascript, skill: "JavaScript", progress: 95 },
             { icon : RiReactjsLine, skill: "React.js", progress: 95 },
             { icon : TbBrandNextjs, skill: "Next.js", progress: 90 },
+            { icon : FaVuejs, skill: "Vue.js", progress: 80 },
             { icon : SiRedux, skill: "Redux", progress: 85 },
             { icon : SiTypescript, skill: "Typescript", progress: 85 },
             { icon : SiExpress, skill: "Express.js", progress: 90 },
             { icon : FaNodeJs, skill: "Node.js", progress: 90 },
+            { icon : SiNestjs, skill: "Nest.js", progress: 80 },
             { icon : SiMongodb, skill: "MongoDB", progress: 90 },
             { icon : FaWordpress, skill: "Wordpress", progress: 90 }
             ]
@@ -42,7 +44,9 @@ const Skill = () => {
         {
             programming: [
             { icon : SiJavascript, skill: "JavaScript", progress: 95 },
-            { icon : SiPhp, skill: "php", progress: 60 }
+            { icon : SiTypescript, skill: "Typescript", progress: 85 },
+            { icon : SiPhp, skill: "php", progress: 60 },
+            { icon : FaPython, skill: "Python", progress: 50 },
             ]
         },
 
