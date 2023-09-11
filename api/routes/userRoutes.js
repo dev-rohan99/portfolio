@@ -1,6 +1,6 @@
 import express from "express";
 import { downloadMyResume, mailSendController, userLogin, userSignup } from "../controllers/user-controller/userController.js";
-import { adminPortfolioCreate, getAllAdminPortfolio } from "../controllers/admin-controller/adminController.js";
+import { adminPortfolioCreate, getAllAdminPortfolio, packageCreate, packagesGet } from "../controllers/admin-controller/adminController.js";
 import { verifyUser } from "../middlewares/auth/authMiddleware.js";
 
 // init route
@@ -14,6 +14,10 @@ router.post("/login", userLogin);
 router.post("/portfolio", verifyUser, adminPortfolioCreate);
 // admin portfolio route
 router.get("/portfolio/get", getAllAdminPortfolio);
+// admin packages route
+router.post("/packages", verifyUser, packageCreate);
+// packages get
+router.get("/packages/get", packagesGet);
 // client mail route
 router.post("/client-mail", mailSendController);
 // download my resume

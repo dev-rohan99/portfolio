@@ -42,7 +42,7 @@ const Portfolio = () => {
 
                         <div className="px-5 py-3 pt-1 mt-4">
                             <h3 className="text-[31px] text-[#28AE60] font-bold">{data.projectName}</h3>
-                            <p className="text-[19px] mb-3 text-[#fff] font-medium wrapper">{data.projectDesc}</p>
+                            <p className="text-[16px] mb-3 text-[#fff] font-medium wrapper">{data.projectDesc}</p>
 
                             <div className="flex justify-start items-center mb-3">
                               <Link target='_blank' href={data.projectGithubUrl}><span className="hover:text-[#28AE60] ease-in-out duration-500 text-gray-500 mr-3"><FaGithub className="text-3xl"/></span></Link>

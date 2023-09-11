@@ -43,10 +43,10 @@ const Header = () => {
                 </div>
 
                 <div className="w-[160px] hidden lg:flex justify-end">
-                    <Link href="/login">
+                    <Link href="/packages">
                         <a className="w-[130px] h-[40px] text-[14px] md:w-[140px] md:h-[45px] md:text-[15px] lg:w-[145px] lg:h-[45px] lg:text-[16px] xl:w-[150px] xl:h-[50px] 2xl:w-[170px] 2xl:h-[55px] 2xl:text-[18px] flex justify-center items-center bg-[#28AE60] border-[3px] border-[#28AE60] hover:bg-transparent ease-in-out duration-500 text-white font-semibold loginBtn rounded-md hover:text-[#28AE60] relative">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-md bg-[#28AE60] opacity-75"></span>
-                            Login
+                            Get Started
                         </a>
                     </Link>
                 </div>

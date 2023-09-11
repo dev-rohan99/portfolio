@@ -37,6 +37,13 @@ export const apiSlice = createApi({
             })
         }),
 
+        getPackagesItems : builder.query({
+            query : ({priceRange, cat, serviceName}) => ({
+                url : `/user/packages/get?&service=${serviceName}${cat}`,
+                method : "GET"
+            })
+        }),
+
         clientMessageSend : builder.mutation({
             query : (payload) => ({
                 url : `/user/client-mail`,
@@ -56,4 +63,4 @@ export const apiSlice = createApi({
 });
 
 
-export const { useRegisterMutation, useLoginMutation, useUpdateUserMutation, useGetPortfolioItemsQuery, useClientMessageSendMutation, useDownloadResumeQuery } = apiSlice;
+export const { useRegisterMutation, useLoginMutation, useUpdateUserMutation, useGetPortfolioItemsQuery, useClientMessageSendMutation, useDownloadResumeQuery, useGetPackagesItemsQuery } = apiSlice;
