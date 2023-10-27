@@ -49,6 +49,14 @@ app.use("/api/v1/user/download-my-resume", (req, res, next) => {
 // error handler
 app.use(errorHandler);
 
+if (process.env.NODE_ENV === 'PRODUCTION'){
+    app.use(express.static(path.join(__dirname, '/front-end/build')));
+  
+    app.get('*', (req, res) =>
+      res.sendFile(path.join(__dirname, 'front-end', 'build', 'index.html'))
+    );
+}
+
 const PORT = process.env.SERVER_PORT | 8080;
 app.listen(PORT, (err) => {
     if(err){
