@@ -50,10 +50,10 @@ app.use("/api/v1/user/download-my-resume", (req, res, next) => {
 app.use(errorHandler);
 
 if (process.env.NODE_ENV === 'PRODUCTION'){
-    app.use(express.static(path.join(__dirname, '/front-end/build')));
+    app.use(express.static(path.join(__dirname, '/front-end/.next')));
   
     app.get('*', (req, res) =>
-      res.sendFile(path.join(__dirname, 'front-end', 'build', 'index.html'))
+      res.sendFile(path.join(__dirname, 'front-end', '.next', 'index.html'))
     );
 }
 
