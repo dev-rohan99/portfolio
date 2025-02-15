@@ -119,7 +119,7 @@ const Skill = () => {
               { 
                 web && (
                   <>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
 
                         {
                           skillsState.map((data : {icon: any, skill : string, progress : number}, index : number) => 
@@ -147,7 +147,7 @@ const Skill = () => {
               { 
                 programming && (
                   <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
 
                         {
                           skillsState2.map((data : {skill : string, progress : number}, index : number) => 
@@ -175,7 +175,7 @@ const Skill = () => {
               { 
                 tools && (
                   <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
 
                         {
                           skillsState3.map((data : {skill : string, progress : number}, index : number) => 
