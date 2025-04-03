@@ -40,7 +40,7 @@ const Portfolio = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-[50px]">
 
-                  { projects.reverse().map((data: object, index: number) => (
+                  { [...projects].reverse().map((data: object, index: number) => (
                       <div className="portfolioCard relative p-3" key={`65546hjgjhg5456${index}`}>
                         <span className="px-4 py-1 text-[15px] font-medium uppercase rounded-lg shadow-lg text-white bg-[#28AE60] absolute top-3 right-3 z-50">{data.status}</span>
 

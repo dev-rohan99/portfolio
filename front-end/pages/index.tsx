@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Header from '../components/header/Header';
 import TopHeader from '../components/top-header/TopHeader';
 import devImage from "../assets/images/devrohanImageTwo.png";
-import MyImage from "../assets/images/devRohan.jpg";
+import MyImage from "../assets/images/bannerme.jpg";
 import Image from 'next/image';
 import { FaPlayCircle } from 'react-icons/fa';
 import { RiCloseFill } from 'react-icons/ri';
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
               </div>
 
               <div style={{backgroundSize:"50% 100%"}} className="mt-[-124px] flex lg:justify-start justify-center items-center z-0 w-[100%] h-[100vh] lg:bg-[url('../assets/images/bannerPhoto.jpg')] lg:bg-[50% 100%] bg-none bg-no-repeat bg-right ...">
-                <div className="container">
+                <div className="container flex lg:justify-between items-center flex-col lg:flex-row">
                   <div className="lg:w-[50%] mt-[60px] mx-auto lg:mx-0 w-[100%] lg:text-left text-center md:w-[600px]">
                     <h1 className="text-[26px] md:text-[32px] lg:text-[35px] xl:text-[45px] 2xl:text-[50px] text-white font-semibold bannerHeading">Grow Big with <span className="text-[#28AE60]">Dev Rohan</span> {'"Full Stack Developer"'}</h1>
                     <p className="text-[15px] md:text-[18px] xl:text-[19px] lg:text-[16px] 2xl:text-[23px] text-white mt-3 mb-3 font-normal bannerPara">Are you looking to create dynamic and interactive web applications? So look no further! As a seasoned MERN stack expert,  i specialize in crafting immersive user experiences by seamlessly integrating MongoDB, Express, React and Node. I have experience in creating high quality projects with more than 50+ global and local projects.</p>
@@ -63,9 +63,9 @@ const Home: NextPage = () => {
                     </div>
                   </div>
 
-                  {/* <div className="lg:w-[35%] mx-auto lg:mx-0 w-[100%] text-center md:w-[300px]">
-                    <Image src={MyImage} className="rounded-lg overflow-hidden duration-700" alt="dev-rohan"/>
-                  </div> */}
+                  <div className="lg:w-[35%] mx-auto lg:mx-0 w-[100%] text-center md:w-[300px] opacity-70">
+                    <Image src={MyImage} className="rounded-xl overflow-hidden duration-700" height={700} alt="dev-rohan"/>
+                  </div>
                 </div>
               </div>
 
